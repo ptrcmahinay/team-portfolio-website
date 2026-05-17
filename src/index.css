@@ -127,4 +127,37 @@
   html {
     @apply font-sans;
     }
+
+  .outer-gradient {
+    /* background: radial-gradient(circle at center, #D94496 0%, transparent 60%); */
+    background: linear-gradient(90deg, rgb(255, 219, 253) 31%, rgb(253, 223, 253) 71%, rgb(254, 181, 254) 100%)
+  }
+  
+  .radial-bg {
+    position: absolute;
+    inset: 0;
+    height: 500px;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 1) 0%, rgba(255,255,255, 0.8) 30%, rgba(255,255,255, 0) 55%, rgba(255,255,255,0) 75%)
+  }
+
+  .bottom-left-gradient{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    background: radial-gradient(circle at bottom left, rgba(255, 255, 255, 1) 0%, rgba(255,255,255, 0.8) 30%, rgba(255,255,255, 0) 55%, rgba(255,255,255,0) 75%);
+  }
+
+  .bottom-right-gradient{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle at bottom right, rgba(255, 255, 255, 1) 0%, rgba(255,255,255, 0.8) 30%, rgba(255,255,255, 0) 55%, rgba(255,255,255,0) 75%)
+  }
+
+  .image-mask{
+    mask-image: linear-gradient(to top, transparent 0%, black 15%);
+  }
 }
