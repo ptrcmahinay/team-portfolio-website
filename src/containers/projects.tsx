@@ -2,9 +2,9 @@ import { ProjectsData } from '@/utils/helper'
 import React from 'react'
 import { motion } from "motion/react"
 
-const Works = () => {
+const Projects = () => {
   return (
-    <motion.div id='works' className="w-full min-h-screen flex flex-col items-center justify-center container mx-auto px-6 space-y-6" 
+    <motion.div id='projects' className="w-full min-h-screen flex flex-col items-center justify-center container mx-auto px-6 space-y-6" 
     initial={{
       opacity: 1
     }} 
@@ -19,8 +19,8 @@ const Works = () => {
       amount: 0.5
     }}
       >
-      <h2 className="text-xl md:text-2xl text-center font-bold text-neutral-800 uppercase">
-        Featured Projects
+      <h2 className="text-xl md:text-2xl text-center font-bold text-pink-500 uppercase">
+        Projects
       </h2>
       <p></p>
 
@@ -35,7 +35,7 @@ const Works = () => {
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="relative overflow-hidden rounded-xl group cursor-pointer shadow-[0_10px_30px_rgba(236,72,153,0.35)]
+    <div className="relative overflow-hidden rounded-xl group cursor-pointer shadow-2xl
   hover:shadow-[0_15px_40px_rgba(236,72,153,0.5)]
   transition-all duration-300">
       <img
@@ -59,4 +59,4 @@ const ProjectCard = ({ project }) => {
   )
 }
 
-export default Works
+export default Projects

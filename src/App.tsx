@@ -3,8 +3,11 @@ import { Button } from '@/components/ui/button'
 import Header from '@/components/header'
 import Portfolio from '@/containers/portfolio'
 import Home from '@/containers/home'
-import Works from '@/containers/works'
+import Projects from '@/containers/projects'
 import About from '@/containers/about'
+import Services from '@/containers/services'
+import Contact from '@/containers/contact'
+import Footer from '@/containers/footer'
 
 const App = () => {
   return (
@@ -17,16 +20,20 @@ const App = () => {
 
       <Portfolio />
 
-      {/* works */}
-      <Works/>
+      {/* Projects */}
+      <Projects/>
       {/* about us */}
 
       <About/>
-      {/* services */}
 
+      <Services/>
+      {/* services */}
+      
       {/* contact */}
+      <Contact/>
 
       {/* footer */}
+      <Footer/>
     </div>
   )
 }

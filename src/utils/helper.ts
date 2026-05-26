@@ -10,9 +10,9 @@ export const NavMenus = [
     key : "home"
   },
   {
-    label : "Works",
-    url : "/?section=works",
-    key : "works"
+    label : "Projects",
+    url : "/?section=projects",
+    key : "projects"
   },
   {
     label : "About",
