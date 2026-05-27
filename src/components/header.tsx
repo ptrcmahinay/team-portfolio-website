@@ -1,15 +1,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X, Home, FolderKanban, User, Wrench } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NavMenus } from "@/utils/helper";
-
-const navIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  home: Home,
-  projects: FolderKanban,
-  about: User,
-  services: Wrench,
-};
 
 const Header = () => {
   const [activeSection, setActiveSection] = React.useState("home");
@@ -41,7 +34,6 @@ const Header = () => {
   const renderNav = (isMobile = false) => (
     <ul className={isMobile ? "flex flex-col gap-1" : "flex items-center gap-1"}>
       {NavMenus.map((menu) => {
-        const Icon = navIcons[menu.key];
         const isActive = activeSection === menu.key;
 
         return (
@@ -58,7 +50,6 @@ const Header = () => {
                   : "text-neutral-600 hover:text-pink-500"
               )}
             >
-              {Icon && <Icon className="size-4" />}
               {menu.label}
             </button>
           </li>
