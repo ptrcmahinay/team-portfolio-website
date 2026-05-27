@@ -21,12 +21,12 @@ const TeamCard = ({ member }: { member: TeamMember }) => {
   return (
     <Dialog open={open} onOpenChange={handleDialogOpenChange}>
       <DialogTrigger asChild>
-        <div className="relative w-full space-y-2 overflow-hidden group cursor-pointer">
+        <div className="relative w-full max-w-xs mx-auto space-y-2 overflow-hidden group cursor-pointer">
           <div className="w-full shadow hover:shadow-lg relative overflow-hidden rounded-xl transition-all duration-300">
             <img
               src={member.image}
               alt={member.name}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full aspect-square md:aspect-[4/5] object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300" />
             <div className="absolute bottom-0 left-0 w-full p-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -45,21 +45,21 @@ const TeamCard = ({ member }: { member: TeamMember }) => {
       </DialogTrigger>
 
       <DialogContent
-        className="max-w-2xl sm:max-w-3xl p-0 gap-0 overflow-hidden"
-        showCloseButton={false}
+        className="max-w-[95vw] sm:max-w-xl md:max-w-2xl p-0 gap-0 overflow-hidden"
+        showCloseButton={true}
       >
-        <div className="flex flex-col md:flex-row max-h-[90vh] overflow-y-auto">
+        <div className="flex flex-col md:flex-row max-h-[85vh] overflow-y-auto">
           {/* Left: Image */}
-          <div className="w-full md:w-[45%] bg-neutral-100 flex items-center">
+          <div className="w-full md:w-[40%] bg-neutral-100 flex items-center shrink-0">
             <img
               src={member.image}
               alt={member.name}
-              className="w-full h-full object-cover"
+              className="w-full aspect-[4/3] md:aspect-auto md:h-full object-cover"
             />
           </div>
 
           {/* Right: Details */}
-          <div className="flex flex-col justify-center w-full md:w-[55%] p-6 md:p-8 space-y-5">
+          <div className="flex flex-col justify-center w-full md:w-[60%] p-5 md:p-6 space-y-4">
             <div>
               <DialogTitle className="text-2xl md:text-3xl font-bold text-neutral-900">
                 {member.name}
@@ -121,7 +121,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-200 min-h-screen flex flex-col items-center justify-center container mx-auto px-6 py-20 space-y-8"
+      className="flex flex-col items-center justify-center container mx-auto min-h-screen px-4 md:px-6 py-20 space-y-8"
     >
       <h2 className="text-xl md:text-2xl text-center font-bold text-pink-500 uppercase">
         About the Team
@@ -133,7 +133,7 @@ const About = () => {
         should be fearless and code should be clean.
       </p>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {TeamData.map((member) => (
           <TeamCard key={member.id} member={member} />
         ))}

@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-6xl mx-auto px-4 py-4">
-        <div className="grid grid-cols-3 gap-10">
-          <h1 className="text-9xl font-bold tracking-tighter leading-none text-pink-500">TRIA</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
+          <h1 className="text-6xl sm:text-7xl md:text-9xl font-bold tracking-tighter leading-none text-pink-500">TRIA</h1>
           <div>
             <h3 className="font-semibold mb-4 uppercase">Contact us</h3>
 

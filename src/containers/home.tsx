@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
        <div className="w-full mx-auto px-6 pt-10 pb-0 text-center">
-          <h1 className="mx-auto max-w-4xl text-xl sm:text-3xl md:text-5xl font-bold text-neutral-800 leading-[1.1] tracking-tight">
+          <h1 className="mx-auto max-w-4xl text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-800 leading-tight tracking-tight">
             We are a team of <span className="italic font-[Times_New_Roman] bg-black text-pink-400">women</span>
             <br />
             developers and designers
@@ -18,7 +18,7 @@ const Home = () => {
 
           <div className="mt-3 flex flex-wrap items-center justify-center gap-4">
             <Button >
-              <a href="#contact">Contact</a>
+              <a href="#contact">Contact Us</a>
             </Button>
 
             <Button variant={'pink'}>
@@ -39,8 +39,6 @@ const Home = () => {
               height={1020}
               className="mx-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-[720px] object-contain image-mask"
             />
-
-
           </div>
         </div>
     </div>
