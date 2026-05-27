@@ -1,4 +1,3 @@
-import React from 'react';
 import pat from '@/assets/pat.png'
 
 const Home = () => {
