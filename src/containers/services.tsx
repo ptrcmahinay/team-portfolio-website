@@ -1,70 +1,59 @@
-import React from 'react';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Badge }  from '@/components/ui/badge';
+import { ServicesData, type Service } from "@/utils/helper";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
+
+const ServiceCard = ({ service }: { service: Service }) => {
+  const Icon = service.icon;
+
+  return (
+    <Card className="group hover:shadow-[0_8px_30px_rgba(236,72,153,0.15)] hover:-translate-y-1 hover:ring-pink-200/50 transition-all duration-300">
+      <CardHeader className="flex-row items-start gap-4 space-y-0">
+        <div className="shrink-0 flex items-center justify-center size-10 rounded-lg bg-pink-50 text-pink-500 group-hover:bg-pink-500 group-hover:text-white transition-all duration-300">
+          <Icon className="size-5" />
+        </div>
+        <h3 className="font-semibold text-neutral-800">{service.title}</h3>
+      </CardHeader>
+      <CardContent className="space-y-3">
+        <p className="text-sm text-neutral-500 leading-relaxed">
+          {service.description}
+        </p>
+        <div className="flex flex-wrap gap-1.5">
+          {service.tags.map((tag) => (
+            <Badge
+              key={tag}
+              variant="outline"
+              className="border-pink-200 text-pink-600 bg-pink-50 text-xs"
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
 const Services = () => {
   return (
-    <div id="services" className="w-full min-h-screen flex flex-col items-center justify-center mx-auto px-6 space-y-6">
-      <h2 className="text-xl md:text-2xl text-center font-bold text-pink-500 uppercase">Services</h2>
+    <section
+      id="services"
+      className="w-full min-h-screen flex flex-col items-center justify-center mx-auto px-6 py-20 space-y-8"
+    >
+      <h2 className="text-xl md:text-2xl text-center font-bold text-pink-500 uppercase">
+        Services
+      </h2>
 
-      <h3 className="text-sm md:text-lg text-center text-neutral-500 font-serif">Quality work at student rates — fast turnaround, no corporate overhead.</h3>
+      <p className="max-w-xl text-sm md:text-base text-center text-neutral-500">
+        Quality work at student rates — fast turnaround, no corporate overhead.
+      </p>
 
-      <div className="w-2xl grid grid-cols-2 gap-5">
-        {/* first service */}
-        <div>
-          <Card>
-            <CardHeader className='font-semibold text-neutral-800'>Web Development</CardHeader>
-            <CardContent>Static sites, landing pages, and small business websites. Mobile-friendly and fast.
-              <div>
-                <Badge>HTML/CSS</Badge>
-                <Badge>Tailwind</Badge>
-                <Badge>JavaScript</Badge>
-                <Badge>React TypeScript</Badge>
-                <Badge>MySQL</Badge>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        <div>
-          <Card>
-            <CardHeader className='font-semibold text-neutral-800'>Tech Support & Setup</CardHeader>
-            <CardContent>
-              Static sites, landing pages, and small business websites. Mobile-friendly and fast.
-              <div className="">
-                <Badge>Hardware</Badge>
-                <Badge>Networking</Badge>
-                <Badge>Windows</Badge>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        <div>
-          <Card>
-            <CardHeader className='font-semibold text-neutral-800'>UI/UX & Graphic Design</CardHeader>
-            <CardContent>
-              Figma mockups, logo design, and social medi graphics for your brand or org
-              <div>
-                <Badge>Figma</Badge>
-                <Badge>Canva</Badge>
-                <Badge>Branding</Badge>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        <div>
-          <Card>
-            <CardHeader>AI Automations</CardHeader>
-            <CardContent>Figma mockups, logo design, and social medi graphics for your brand or org
-              <div>
-                <Badge>Figma</Badge>
-                <Badge>Canva</Badge>
-                <Badge>Branding</Badge>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+      <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {ServicesData.map((service) => (
+          <ServiceCard key={service.title} service={service} />
+        ))}
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Services
+export default Services;

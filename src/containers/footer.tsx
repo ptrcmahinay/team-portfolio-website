@@ -18,7 +18,6 @@ const Footer = () => {
             <div className="flex gap-2 py-2">
               <Mail /><p>powerpopstone@gmail.com</p>
             </div>
-
           </div>
 
           <div>

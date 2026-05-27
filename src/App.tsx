@@ -17,8 +17,46 @@ const App = () => {
 
       {/* home */}
       <Home />
+      <div className="brand-marquee overflow-hidden whitespace-nowrap py-4">
+        <div className="marquee-track flex w-max animate-marquee gap-20">
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> Figma
+          </span>
 
-      <Portfolio />
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> React
+          </span>
+
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> JavaScript
+          </span>
+
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> TypeScript
+          </span>
+
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> Framer Motion
+          </span>
+
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> Php
+          </span>
+
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> MySQL
+          </span>
+
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> Tailwind
+          </span>
+
+          <span className="marquee-item flex items-center gap-2">
+            <span className="dot w-2 h-2 rounded-full bg-pink-500"></span> Supabase
+          </span>
+        </div>
+      </div>
+      {/* <Portfolio /> */}
 
       {/* Projects */}
       <Projects/>

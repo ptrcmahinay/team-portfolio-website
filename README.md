@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# TRIA - Team Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A team portfolio website built as a school project for **ITEC 101 - Human Computer Interaction II**. Showcases our team's skills, projects, and services.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Responsive design** with Tailwind CSS utility classes
+- **Header navigation** with active section tracking via URL params
+- **Portfolio showcase** with project filtering (All, UI/UX, Web App, Branding)
+- **Services section** displaying our team's offerings
+- **Contact form** powered by EmailJS with name, email, subject, and message fields
+- **Footer** with contact details (address, phone, email) and social links
 
-## React Compiler
+## Sections
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Section    | Description                               |
+| ---------- | ----------------------------------------- |
+| Home       | Hero section with team intro              |
+| Works      | Featured work samples                     |
+| About      | Team member profiles                      |
+| Services   | Service offerings                         |
+| Contact    | EmailJS-powered contact form              |
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Technology       | Purpose               |
+| ---------------- | --------------------- |
+| React 19         | UI framework          |
+| TypeScript       | Type safety           |
+| Vite             | Build tool & dev server |
+| Tailwind CSS v4  | Styling               |
+| shadcn/ui        | UI component library  |
+| EmailJS          | Contact form delivery |
+| Lucide React     | Icons                 |
+| Motion           | Animations            |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/
+│   ├── ui/            # shadcn/ui components (button, input, etc.)
+│   └── header.tsx     # Sticky navigation header
+├── containers/
+│   ├── home.tsx       # Hero section
+│   ├── portfolio.tsx  # Project gallery with filtering
+│   ├── works.tsx      # Featured works
+│   ├── about.tsx      # Team member profiles
+│   ├── services.tsx   # Service offerings
+│   ├── contact.tsx    # Contact form (EmailJS)
+│   └── footer.tsx     # Site footer
+├── lib/
+│   └── utils.ts       # Tailwind class merging utility
+├── utils/
+│   └── helper.ts      # Navigation menu data
+├── App.tsx            # Root layout
+└── main.tsx           # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Team Members
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Patricia Ann** - Developer
+- **Mark Anthony** - Developer
+- **Christian Paul** - Developer
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
+
+The dev server starts at `http://localhost:5173`.
+
+## Build
+
+```bash
+npm run build
+```
+
+Output is written to the `dist/` directory.
+
+## Environment Variables
+
+To use the contact form, create a `.env` file with your EmailJS credentials:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+Then update `src/containers/contact.tsx` to reference `import.meta.env.VITE_EMAILJS_*` variables instead of the placeholder strings.

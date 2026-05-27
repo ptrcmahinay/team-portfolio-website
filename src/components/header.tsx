@@ -61,7 +61,7 @@ const Header = () => {
 
   hover:bg-white/60
   transition-all duration-300">
-      <h2 className="text-2xl md:text-3xl italic font-serif font-normal text-neutral-800">Tria.</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-neutral-800">Tria.</h2>
       <nav className="absolute left-1/2 -translate-x-1/2">
         <ul className="flex items-center gap-6">
           {NavMenus.map((menu) => {
@@ -72,7 +72,7 @@ const Header = () => {
                 <a onClick={(e) => {
                   e.preventDefault();
                   handleNavigationalLinkClick(menu)
-                }} className={cn("text-neutral-600 hover:text-neutral-800 hover:font-semibold transition-all ease-in-out duration-75 p-2.5", isActive && "text-neutral-800 font-semibold underline")} href={menu.url}>
+                }} className={cn("text-neutral-600 hover:text-neutral-800 hover:font-semibold hover:text-pink-500 transition-all ease-in-out duration-75 p-2.5", isActive && "text-pink-500 font-semibold underline")} href={menu.url}>
                   {menu.label}
                 </a>
               </li>
@@ -92,7 +92,7 @@ const Header = () => {
           });
         }}
       >
-        <Button className={"cursor-pointer"}>Contact</Button>
+        <Button className={"cursor-pointer"}>Contact Us</Button>
       </a>
     </header>
   )

@@ -40,28 +40,7 @@ const Home = () => {
               className="mx-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-[720px] object-contain image-mask"
             />
 
-            
-            {/* Overlay labels */}
-            <div className="absolute inset-0 z-20">
 
-              {/* Sanny */}
-              <div className="absolute top-6 left-1/5 flex flex-col items-center animate-bounce">
-                <span className="text-sm font-semibold text-black">Sanny</span>
-              </div>
-
-              {/* Patricia */}
-              <div className="absolute top-6 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-                <span className="text-sm font-semibold text-black">Patricia</span>
-                <span className="text-pink-500">↓</span>
-              </div>
-
-              {/* Cristene */}
-              <div className="absolute top-6 right-1/5 flex flex-col items-center animate-bounce">
-                <span className="text-sm font-semibold text-black">Cristene</span>
-                <span className="text-pink-500">↓</span>
-              </div>
-
-            </div>
           </div>
         </div>
     </div>
