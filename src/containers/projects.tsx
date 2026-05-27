@@ -1,7 +1,7 @@
 import { ProjectsData, type Project } from "@/utils/helper";
 import { motion } from "motion/react";
 import { useState, useCallback } from "react";
-import { ExternalLinkIcon, GitBranchIcon } from "lucide-react";
+import { ExternalLinkIcon } from "lucide-react";
 import { MoveRightIcon } from "lucide-react";
 import {
   Dialog,
@@ -63,7 +63,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </div>
             </div>
             <div>
-            <h3 className="font-bold text-md text-neutral-700">{project.title} </h3>
+            <h3 className="font-bold text-md text-neutral-700">Project No. {project.id} </h3>
             <p className="font-bold text-xs text-pink-500 uppercase">
               {project.title}
             </p>
@@ -145,17 +145,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 <Button variant="default" size="sm" className="gap-1.5 cursor-pointer">
                   <ExternalLinkIcon className="size-3.5" />
                   Figma
-                </Button>
-              </a>
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Button variant="outline" size="sm" className="gap-1.5 cursor-pointer">
-                  <GitBranchIcon className="size-3.5" />
-                  Source Code
                 </Button>
               </a>
             </div>

@@ -33,7 +33,6 @@ export interface Project {
   images: string[];
   tags: string[];
   Figma: string;
-  githubUrl: string;
 }
 
 export const NavMenus = [
@@ -66,9 +65,8 @@ export const ProjectsData: Project[] = [
     description:
       "A full-featured beauty appointment booking app for nails, salon, makeup, and more. Built with a modern stack for seamless user experience.",
     images: [p1, p11, p12, p13, p14],
-    tags: ["React", "TypeScript", "Tailwind", "Supabase"],
+    tags: ["Mobile", "Figma", "UI Design"],
     Figma: "https://www.figma.com/proto/PbAL9LGoXWwQriNKgwr4Bh/Lab-5?node-id=26-89&t=yIM5Jn86ajZw2qTN-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=19%3A2082",
-    githubUrl: "#",
   },
   {
     id: 2,
@@ -76,9 +74,8 @@ export const ProjectsData: Project[] = [
     description:
       "A visually accurate Gmail interface redesign focusing on clean typography, intuitive layout, and responsive email management.",
     images: [p2, p21, p22, p23, p24],
-    tags: ["React", "CSS", "UX Design"],
+    tags: ["Mobile", "Figma", "UI Design"],
     Figma: "https://www.figma.com/proto/E4uMxGzZGyxfHVh4zxac1s/Material-3-Design-Kit--Community-?node-id=60933-3167&t=N8UqcEoDVHo5RTbx-1",
-    githubUrl: "#",
   },
   {
     id: 3,
@@ -86,9 +83,8 @@ export const ProjectsData: Project[] = [
     description:
        "A modern multi-step payment form for Blue Pay with a clean UI, clear progress flow, and optimized user experience for seamless checkout.",
     images: [p3, p31, p32, p33, p34, p35, ],
-    tags: ["React", "Tailwind", "Framer Motion"],
+    tags: ["Mobile", "Figma", "UI Design"],
     Figma: "https://www.figma.com/proto/1mGBgeDlUaO2yAPtGqKm3q/Multi-form-step?node-id=3-11&t=TbzMIGZBVkoFgo07-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2",
-    githubUrl: "#",
   },
 ]
 
